@@ -4,3 +4,4 @@
 
 <div>Form Content: {{cardForm.value | json }}</div>
 <div>Form is valid: {{cardForm.valid}}</div>
+<div>Form is valid: {{cardForm.controls.name.errors | json}}</div>
