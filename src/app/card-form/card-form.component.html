@@ -1,7 +1,9 @@
 <form action="" [formGroup]="cardForm">
-  <input type="text" formControlName="name">
+  <app-input label="Name" [control] = "cardForm.get('name')"></app-input>
+  <app-input label="CardNumber" [control] = "cardForm.get('card')"></app-input>
+  <app-input label="Expiration" [control] = "cardForm.get('expiration')"></app-input>
+  <app-input label="Security Code" [control] = "cardForm.get('securityCode')"></app-input>
 </form>
-
 <div>Form Content: {{cardForm.value | json }}</div>
 <div>Form is valid: {{cardForm.valid}}</div>
 <div>Form is valid: {{cardForm.controls.name.errors | json}}</div>
