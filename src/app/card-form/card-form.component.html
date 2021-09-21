@@ -3,7 +3,7 @@
   <app-input label="CardNumber" [control] = "cardForm.get('card')"></app-input>
   <app-input label="Expiration" [control] = "cardForm.get('expiration')"></app-input>
   <app-input label="Security Code" [control] = "cardForm.get('securityCode')"></app-input>
-  <button type="submit">Submit!!</button>
+  <button [disabled]="cardForm.invalid" class="button is-primary" type="submit">Submit!!</button>
 </form>
 <div>Form Content: {{cardForm.value | json }}</div>
 <div>Form is valid: {{cardForm.valid}}</div>
