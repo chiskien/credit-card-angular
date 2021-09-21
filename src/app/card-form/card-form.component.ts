@@ -15,7 +15,9 @@ export class CardFormComponent implements OnInit {
     expiration: new FormControl('',[
       Validators.required, Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/),
     ]),
-    securityCode: new FormControl(''),
+    securityCode: new FormControl('', [
+      Validators.required, Validators.minLength(3),Validators.maxLength(3),
+    ]),
   });
 
   constructor() {
